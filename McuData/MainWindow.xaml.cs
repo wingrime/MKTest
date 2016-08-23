@@ -34,7 +34,7 @@ namespace McuData
             UpdateConnectionStatus();
         }
         private static string PrintableDeviceName(DeviceInformation devInfo) {
-            return $"МКЦ на {devInfo.portDescription}";
+            return $"Подключен к {devInfo.portDescription}";
 
         }
         private void UpdateConnectionStatus() {
@@ -45,7 +45,7 @@ namespace McuData
                 case ConnectionState.Unconnected:
                     dataTransmissionPanel.Visibility = Visibility.Collapsed;
                     portSelection.IsEnabled = false;
-                    portSelection.Text = "Нет подключенных комплектов ААП";
+                    portSelection.Text = "Не подключен";
                     if (mk != null)
                         {
                         mk = null;
