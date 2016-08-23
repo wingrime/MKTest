@@ -1,0 +1,93 @@
+﻿<Page x:Class="TestingUI.ManualTesting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestingUI"
+      mc:Ignorable="d" 
+      Title="ManualTesting">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="40*" />
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="40*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock  FontFamily="Segoe UI Light"
+    		Grid.Column="1" 
+    		Grid.Row="5" 
+            Grid.ColumnSpan="3"
+    		HorizontalAlignment="Center" VerticalAlignment="Bottom"
+    		FontSize="18"  >
+            <Run Text="Для того что бы вернуться нажимте "/>
+            <Hyperlink Foreground="Black" Click="Hyperlink_Click" 
+                       >
+                <Run Text="Назад"/>
+            </Hyperlink>
+
+        </TextBlock>
+        <TextBlock
+        	Grid.Column="1" 
+        	Grid.Row="1" 
+        	Grid.ColumnSpan="3"
+            Foreground="Black"
+        	FontSize="24" 
+            TextWrapping="Wrap"
+           
+            TextAlignment="Center" >
+            <LineBreak/>
+            <Run  FontFamily="Segoe UI Light" Text="Проверте  индикаторы &quot;Команда 1&quot; и &quot;Команда 2&quot; после нажатия соответстувующих кнопок"/></TextBlock>
+        <Label x:Name="componentSelectLabel" 
+               Content="1. Проверка контактов" 
+               FontSize="32" 
+               FontFamily="Segoe UI Light"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"
+               />
+        <Button x:Name="btnCoil1" 
+               Content="Проверка &quot;Команда 1&quot;" 
+               Margin="0" 
+               Style="{DynamicResource testingStyleBtn}" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               
+                
+                Grid.Row="2"
+                Grid.Column="1" 
+                Click="btnCoil1_Click"
+                />
+        <Button x:Name="btnCoil2" 
+                Content="Проверка &quot;Команда 2&quot;" 
+                Style="{DynamicResource testingStyleBtn}" 
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                
+                Grid.Row="2"
+                Grid.Column="3" 
+                
+                Click="btnCoil2_Click"
+                />
+        <Button x:Name="nextTest" 
+                Content="Продолжить"
+                Style="{DynamicResource testingStyleBtn}" 
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Grid.Row="4"
+                Grid.Column="1" 
+                Grid.ColumnSpan="3" Click="nextTest_Click"
+                />
+    </Grid>
+</Page>

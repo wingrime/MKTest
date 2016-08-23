@@ -1,0 +1,64 @@
+﻿<Window x:Class="McuData.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Тест МКЦ" Height="783"  Loaded="Window_Loaded" Unloaded="Window_Unloaded" Width="752"
+        Background="#FF497BD3"
+        >
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="10">
+
+
+
+            <ComboBox  IsEditable="True" IsReadOnly="True"  Name="portSelection" FontSize="18" DropDownOpened="portSelection_DropDownOpened" SelectionChanged="portSelection_SelectionChanged" Text="Выбор порта" />
+        <StackPanel Name="dataTransmissionPanel" Visibility="Visible" Height="665" Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <Button Name="rs485QualityBtn" Content="1. Проверка качества связи RS485" Margin="5" FontSize="18"  />
+                <Button Name="ledTestBtn" Content="2. Проверка светодиодного индикатора" Margin="5" FontSize="18"  />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="coil1OnBtn" Content="3.1 Замкнуть СК1" Margin="5" FontSize="18"  />
+                    <Button Name="coil1OffBtn" Content="3.2 Разомкнуть СК1" Margin="5" FontSize="18"  />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="coil2OnBtn" Content="4.1 Замкнуть СК2" Margin="5" FontSize="18"  />
+                    <Button Name="coil2OffBtn" Content="4.2 Разомкнуть СК2" Margin="5" FontSize="18"  />
+                </StackPanel>
+             <Label Height="36" VerticalAlignment="Center" Content="5. Проверка сдвигового регистра" FontWeight="Bold" FontSize="18" Foreground="White"/>
+            <Button Name="shiftRegisterSequenceBtn" Content="5.1 Длинная последовательность 010101010101..." Margin="5" FontSize="18"  />
+            <Button Name="shiftRegisterLockTest" Content="5.2 Установка 000000 на всех выходах" Margin="5" FontSize="18"  />
+                <Label Height="36" VerticalAlignment="Center" Content="6. Комутация напряжения на измеритель напряжения" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Button Name="v0Btn" Content="CH0 " Margin="5" FontSize="18"  />
+                    <Button Name="v1Btn" Content="CH1" Margin="5" FontSize="18"  />
+                    <Button Name="v2Btn" Content="CH2" Margin="5" FontSize="18"  />
+                    <Button Name="v3Btn" Content="CH3" Margin="5" FontSize="18"  />
+                    <Button Name="v4Btn" Content="CH4" Margin="5" FontSize="18"  />
+                    <Button Name="v5Btn" Content="CH5" Margin="5" FontSize="18"  />
+                    <Button Name="v6Btn" Content="CH6" Margin="5" FontSize="18"  />
+                    <Button Name="v7Btn" Content="CH7" Margin="5" FontSize="18"  />
+                </StackPanel>
+                <Label Height="36" VerticalAlignment="Center" Content="7. Комутация положительной линии на измеритель утечки" FontWeight="Bold" FontSize="18" Foreground="White"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Button Name="leackPositive0Btn" Content="CH0" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive1Btn" Content="CH1" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive2Btn" Content="CH2" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive3Btn" Content="CH3" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive4Btn" Content="CH4" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive5Btn" Content="CH5" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive6Btn" Content="CH6" Margin="5" FontSize="18"  />
+                    <Button Name="leackPositive7Btn" Content="CH7" Margin="5" FontSize="18"  />
+                </StackPanel>
+                <Label Height="36" VerticalAlignment="Center" Content="8. Комутация отрицательной линии на измеритель утечки" FontWeight="Bold" FontSize="18" Foreground="White" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Button Name="leackNegative0Btn" Content="CH0" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative1Btn" Content="CH1" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative2Btn" Content="CH2" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative3Btn" Content="CH3" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative4Btn" Content="CH4" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative5Btn" Content="CH5" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative6Btn" Content="CH6" Margin="5" FontSize="18"  />
+                    <Button Name="leackNegative7Btn" Content="CH7" Margin="5" FontSize="18"  />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Label Name="portStatus" />
+    </StackPanel>
+</Window>

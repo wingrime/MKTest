@@ -1,0 +1,62 @@
+﻿<Page x:Class="TestingUI.ModeSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestingUI"
+      mc:Ignorable="d" 
+      Title="ModeSelection">
+    <Grid  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="80*" />
+            <ColumnDefinition Width="15*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Column="1" 
+            Grid.Row="5" 
+            HorizontalAlignment="Center" VerticalAlignment="Bottom"
+            FontSize="18"
+             FontFamily="Segoe UI Light"
+            >
+            Для того что бы вернуться нажимте 
+    <Hyperlink  Foreground="Black" Click="Hyperlink_Click">
+        Назад
+    </Hyperlink>
+        </TextBlock>
+        <Label x:Name="componentSelectLabel" 
+                FontFamily="Segoe UI Light"
+               Content="Выбор режима" 
+               FontSize="32" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Grid.Column="1"
+               />
+        <Button x:Name="btnManual" 
+               Content="Ручной тест" 
+               Margin="0" 
+               Style="{DynamicResource testingStyleBtn}" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+                Grid.Row="2"
+                Grid.Column="1" Click="btnManual_Click"
+                />
+        <Button x:Name="btnAutomatic" 
+                Content="Авто тест"
+                Style="{DynamicResource testingStyleBtn}" 
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Grid.Row="4"
+                Grid.Column="1" Click="btnAutomatic_Click"
+                />
+    </Grid>
+</Page>
